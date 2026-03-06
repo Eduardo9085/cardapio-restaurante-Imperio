@@ -1,0 +1,91 @@
+body { background: #f1f5f8; font-family: sans-serif; }
+.menu { padding: 5rem 0; max-width: 1170px; margin: 0 auto; text-align: center; }
+.btn-container { margin-bottom: 4rem; display: flex; justify-content: center; gap: 1rem; }
+.filter-btn { background: transparent; border: 2px solid #c59d5f; padding: 0.375rem 0.75rem; border-radius: 0.5rem; cursor: pointer; transition: all 0.3s; }
+.filter-btn:hover { background: #c59d5f; color: white; }
+.section-center { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; justify-items: center; }
+.menu-item { display: flex; flex-direction: column; gap: 1rem; max-width: 350px; text-align: left; }
+.item-info header { display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; }
+.price { color: #c59d5f; font-weight: bold; }
+
+.menu {
+    background: linear-gradient(#ffffffcc, rgba(255, 255, 255, 0.8)), 
+                url('cardapio2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem; 
+}
+
+/* Seleciona o header dentro da info do item */
+.item-info header {
+  display: flex;          /* Coloca os elementos lado a lado */
+  gap: 110px; /* Deixa um espaço fixo. */
+  align-items: center;    /* Alinha os dois verticalmente ao centro */
+  border-bottom: 0.5px dotted #617d98; /* Opcional: linha pontilhada entre eles */
+  margin-bottom: 0.5rem;
+}
+
+/* Garante que o preço não quebre linha */
+.price {
+  white-space: nowrap;
+  color: #c59d5f; /* Cor de destaque sugerida */
+}
+
+:root {
+  --cor-texto: #ffffff;
+  --cor-destaque: #c59d5f;
+  --cor-fundo: #111;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* Remove margens padrão do navegador */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Fundo com imagem ocupando toda a tela */
+.menu {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(2, 2, 2, 0.8), rgba(0, 0, 0, 0.6)),
+              url('cardapio2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Botões */
+.filter-btn,
+.color-btn,
+.theme-btn {
+  background: transparent;
+  border: 2px solid var(--cor-destaque);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--cor-texto);
+}
+
+.filter-btn:hover,
+.color-btn:hover,
+.theme-btn:hover {
+  background: var(--cor-destaque);
+  color: #fff;
+}
+
+/* Preço */
+.price {
+  color: var(--cor-destaque);
+  font-weight: bold;
+}
