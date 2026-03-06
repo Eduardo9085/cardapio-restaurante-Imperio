@@ -1,0 +1,136 @@
+body { 
+  background: #f1f5f8; /* Cor de fundo da página */
+  font-family: sans-serif; /* Fonte padrão do site */
+}
+
+.menu { 
+  padding: 5rem 0; /* Espaçamento interno da seção do cardápio */
+  max-width: 1170px; /* Largura máxima da área */
+  margin: 0 auto; /* Centraliza o conteúdo na tela */
+  text-align: center; /* Centraliza o texto */
+}
+
+.btn-container { 
+  margin-bottom: 4rem; /* Espaço abaixo dos botões */
+  display: flex; /* Coloca os botões lado a lado */
+  justify-content: center; /* Centraliza os botões */
+  gap: 1rem; /* Espaço entre os botões */
+}
+
+.filter-btn { 
+  border: 2px solid #c59d5f; /* Borda dourada */
+  border-radius: 0.5rem; /* Cantos arredondados */
+  cursor: pointer; /* Mostra a "mãozinha" ao passar o mouse */
+  transition: all 0.3s; /* Animação suave ao interagir */
+}
+
+.filter-btn:hover { 
+  background: #c59d5f; /* Muda o fundo quando passa o mouse */
+  color: white; /* Muda a cor do texto */
+}
+
+.section-center { 
+  display: grid; /* Usa layout em grade */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  /* Cria colunas automáticas com mínimo de 300px */
+  gap: 2rem; /* Espaço entre os itens */
+}
+
+.menu-item { 
+  display: flex; /* Usa flexbox para organizar os elementos */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  max-width: 350px; /* Limita o tamanho do item */
+}
+
+.item-info header { 
+  display: flex; /* Coloca nome e preço lado a lado */
+  justify-content: space-between; /* Um fica em cada lado */
+  border-bottom: 1px solid #ccc; /* Linha separando o item */
+}
+
+.price { 
+  color: #c59d5f; /* Cor de destaque para o preço */
+  font-weight: bold; /* Deixa o preço em negrito */
+}
+
+.menu {
+  background: linear-gradient(#000000cc, rgba(0, 0, 0, 0.8)), 
+              url('cardapio2.jpg');
+  /* Adiciona um fundo com imagem e um gradiente por cima */
+
+  background-size: cover; /* Faz a imagem ocupar toda a área */
+  background-position: center; /* Centraliza a imagem */
+  padding: 5rem 2rem; /* Espaçamento interno */
+}
+
+/* Seleciona o header dentro da info do item */
+.item-info header {
+  display: flex; /* Nome e preço ficam na mesma linha */
+  gap: 110px; /* Espaço fixo entre eles */
+  align-items: center; /* Alinha verticalmente */
+  border-bottom: 0.5px dotted #617d98; /* Linha pontilhada */
+}
+
+/* Garante que o preço não quebre linha */
+.price {
+  white-space: nowrap; /* Impede o preço de quebrar linha */
+  color: #c59d5f; /* Cor de destaque */
+}
+
+:root {
+  --cor-texto: #ffffff; /* Variável para cor do texto */
+  --cor-destaque: #c59d5f; /* Variável para cor principal */
+  --cor-fundo: #000000; /* Variável para cor de fundo */
+}
+
+/* Reset */
+body {
+  margin: 0; /* Remove margem padrão do navegador */
+  font-family: sans-serif;
+  background: var(--cor-fundo); /* Usa a variável de cor de fundo */
+  color: var(--cor-texto); /* Usa a variável de cor do texto */
+}
+
+/* Remove margens padrão do navegador */
+html, body {
+  height: 100%; /* Faz ocupar toda a altura da tela */
+  margin: 0;
+}
+
+/* Fundo com imagem ocupando toda a tela */
+.menu {
+  min-height: 100vh; /* Faz a seção ocupar toda a tela */
+  width: 100%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.8)gba(0, 0, 0, 0.6)),
+              url('cardapio2.jpg');
+  /* Fundo com imagem + camada escura por cima */
+
+  background-size: cover; /* Ajusta a imagem para preencher */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede repetição da imagem */
+}
+
+/* Botões */
+.filter-btn,
+.color-btn,
+.theme-btn {
+  border: 2px solid var(--cor-destaque); /* Borda usando variável */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--cor-fundo); /* Cor do texto usando variável */
+}
+
+.filter-btn:hover,
+.color-btn:hover,
+.theme-btn:hover {
+  background: var(--cor-destaque); /* Cor ao passar o mouse */
+  color: #fff;
+}
+
+/* Preço */
+.price {
+  color: var(--cor-destaque); /* Usa a cor principal definida nas variáveis */
+  font-weight: bold;
+}
